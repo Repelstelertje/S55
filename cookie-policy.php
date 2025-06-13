@@ -4,8 +4,8 @@ include('includes/header.php');
 ?>
 <div class="container">
   <div class="jumbotron my-4">
-    <h1>Cookiebeleid – 18date.net</h1>
-    <p>Deze website, 18date.net, maakt gebruik van cookies. In dit beleid leggen we uit wat cookies zijn, welke cookies we gebruiken en hoe je jouw voorkeuren kunt beheren.</p>
+    <h1>Cookiebeleid – sex55.net</h1>
+    <p>Deze website, sex55.net, maakt gebruik van cookies. In dit beleid leggen we uit wat cookies zijn, welke cookies we gebruiken en hoe je jouw voorkeuren kunt beheren.</p>
     <h2>Wat zijn cookies?</h2>
     <p>Cookies zijn kleine tekstbestanden die op je computer of mobiel apparaat worden opgeslagen wanneer je een website bezoekt. Ze zorgen ervoor dat de website goed functioneert, helpen ons om inzicht te krijgen in hoe bezoekers de site gebruiken, en maken het mogelijk om advertenties relevanter te maken.</p>
     <h2>Welke cookies gebruiken wij?</h2>
@@ -22,7 +22,7 @@ include('includes/header.php');
     <h2>Meer informatie</h2>
     <p>Voor meer informatie over hoe Google cookies gebruikt, kun je terecht op:<br>
     <a href="https://policies.google.com/technologies/partner-sites" target="_blank">https://policies.google.com/technologies/partner-sites</a></p>
-    <p>Heb je vragen over ons cookiebeleid? Neem dan contact met ons op via <a href="mailto:info@18date.net">info@18date.net</a>.</p>
+    <p>Heb je vragen over ons cookiebeleid? Neem dan contact met ons op via <a href="mailto:info@sex55.net">info@sex55.net</a>.</p>
     <p>Laatst bijgewerkt: juni 2025</p>
   </div>
 </div>

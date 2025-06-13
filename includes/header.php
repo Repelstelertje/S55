@@ -66,7 +66,7 @@
 
 <?php
   $canonical = 'https://sex55.net';
-  $pageTitle = '18+ Sexdating | sex55.net';
+  $pageTitle = '55+ Sexdating | sex55.net';
   $ogImage = 'https://sex55.net/img/fb.png';
 
   if(isset($_GET['item'])){
