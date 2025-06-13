@@ -1,5 +1,5 @@
 <?php 
-	// Provincies
+	// Provincies BE
 	$be = array(
 
 					"antwerpen" => array(

@@ -1,5 +1,5 @@
 <?php 
-	// Provincies
+	// Provincies DE
 	$provincies = array(
 
 					"baden-wurttemberg" => array(
