@@ -1,5 +1,5 @@
 <?php 
-	// Provincies
+	// Provincies NL
 	$nl = array(
 
 					"drenthe" => array(

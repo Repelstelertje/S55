@@ -19,16 +19,32 @@ var oproepjes= new Vue({
         max_page_number: function(){
             return Math.ceil(this.profiles.length / this.ppp);  
         },
+        profile: function(){
+        	return this.profiles[0];
+        }
     },
     methods:  {
         init: function(){
+            if (typeof api_url === 'undefined') {
+                // Skip API call when no endpoint is defined on the page
+                return;
+            }
             axios.get(api_url)
                 .then(function(response){
-                    oproepjes.profiles= response.data.profiles;
+                    if(response.data && Array.isArray(response.data.profiles)){
+                        oproepjes.profiles = response.data.profiles.map(function(p){
+                            if(p.src && p.src.indexOf('no_img_Vrouw.jpg') !== -1){
+                                p.src = 'img/fallback.svg';
+                            }
+                            return p;
+                        });
+                    } else {
+                        console.error('Invalid profile data', response.data);
+                    }
                 })
                 .catch(function (error) {
                     console.log(error);
-                });            
+                });
         },
         set_page_number: function(page){
             if(page <= 1){
@@ -40,6 +56,9 @@ var oproepjes= new Vue({
             }
             
             
+        },
+        imgError: function(event){
+            event.target.src = 'img/fallback.svg';
         }
     }
 });
