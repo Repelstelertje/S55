@@ -18,7 +18,7 @@ function getCookieConsent() {
 function loadAnalytics() {
   // Google Analytics
   const script = document.createElement('script');
-  script.src = 'https://www.googletagmanager.com/gtag/js?id=G-MJEYVZDR7N';
+  script.src = 'https://www.googletagmanager.com/gtag/js?id=G-TFQ77HGPY0';
   script.async = true;
   document.head.appendChild(script);
 
