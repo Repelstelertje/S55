@@ -63,7 +63,7 @@ var profiel= new Vue({
                         var newUrl = '/date-' + slug;
                         var link = document.querySelector('link[rel=canonical]');
                         if(link){
-                            link.setAttribute('href', 'https://18date.net' + newUrl);
+                            link.setAttribute('href', 'https://sex55.net' + newUrl);
                         }
                         document.title = 'Date ' + that.profile.name;
                         history.replaceState({}, '', newUrl);
@@ -76,5 +76,20 @@ var profiel= new Vue({
         imgError: function(event){
             event.target.src = 'img/fallback.svg';
         }
+    }
+});
+
+// Track clicks on the "Stuur gratis bericht" button when analytics is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    var btn = document.getElementById('send-msg-btn');
+    if (btn) {
+        btn.addEventListener('click', function() {
+            if (window.gtag) {
+                gtag('event', 'send_free_message_click', {
+                    'event_category': 'Profile',
+                    'event_label': 'Stuur gratis bericht'
+                });
+            }
+        });
     }
 });

@@ -1,19 +1,19 @@
 <?php
 	define("TITLE", "Home");
-    include('includes/arr_prov_nl.php');
-    include('includes/arr_prov_be.php');
-    include('includes/arr_prov_uk.php');
-    include('includes/arr_prov_de.php');
-    include('includes/arr_prov_at.php');
-    include('includes/arr_prov_ch.php');
-    include('includes/array_tips.php');
-    include('includes/header.php');
+  include('includes/arr_prov_nl.php');
+  include('includes/arr_prov_be.php');
+  include('includes/arr_prov_uk.php');
+  include('includes/arr_prov_de.php');
+  include('includes/arr_prov_at.php');
+  include('includes/arr_prov_ch.php');
+  include('includes/array_tips.php');
+  include('includes/header.php');
 ?>
 
 <div class="container">
   <!-- Jumbotron Header -->
   <div class="jumbotron my-4 text-center">
-    <h1>18Date.net - Vind hier jouw gratis sexdate!</h1>
+    <h1>sex55.net - Vind hier jouw gratis sexdate!</h1>
     <hr>
     <h2>Zoek hier vrouwen bij jou in buurt!</h2>
     <div class="button-area">
@@ -80,7 +80,7 @@
     <p>Of je nou bewust op zoek bent naar een eenmalige sexdate of geregeld wil afspreken met dames voor een meerdere sexdates? Op <a href="index.php">Sex55.net</a> vind je <b>meer dan 10.000 single vrouwen die openstaan voor een sexdate</b>. Duizenden singles zijn op dit moment op zoek naar een sexdate, een sexpartner of meerdere sexdates. Van zoeken naar een sexdate binnen enkele dagen, gelijk sex bij jou in de buurt tot meerdere sexdates in een week. Bij <a href="index.php">Sex55.net</a> heb jij het snelst een sexdate in de BeNeLux! Kies in welk land jij wil zoeken naar een sexdate.</p>
   </div>
     <div id="top-banner"></div>
-    <h2 class="jumbotron text-center" id="nederland">Nederland</h2>
+    <h2 class="jumbotron text-center" id="nederland">Sexdate Nederland</h2>
 		<div class="row text-center" id="keuze">
 			<?php 
                                 foreach ($nl as $provnl => $item) {
@@ -102,7 +102,7 @@
 			?>
 		</div>
 
-    <h2 class="jumbotron text-center" id="belgie">België</h2>
+    <h2 class="jumbotron text-center" id="belgie">Sexdate België</h2>
     <div class="row text-center" id="keuze">
       <?php
         foreach ($be as $provbe => $item) {
@@ -123,7 +123,7 @@
         }
       ?>
     </div>
-    <h2 class="jumbotron text-center" id="uk">United Kingdom</h2>
+    <h2 class="jumbotron text-center" id="uk">Sexdate United Kingdom</h2>
     <div class="row text-center" id="keuze">
       <?php foreach ($uk as $provuk => $item) { ?>
       <div class="col-lg-3 col-md-6 mb-4">
@@ -139,7 +139,7 @@
       </div>
       <?php } ?>
     </div>
-    <h2 class="jumbotron text-center" id="duitsland">Duitsland</h2>
+    <h2 class="jumbotron text-center" id="duitsland">Sexdate Duitsland</h2>
     <div class="row text-center" id="keuze">
       <?php foreach ($de as $provde => $item) { ?>
       <div class="col-lg-3 col-md-6 mb-4">
@@ -155,7 +155,7 @@
       </div>
       <?php } ?>
     </div>
-    <h2 class="jumbotron text-center" id="oostenrijk">Oostenrijk</h2>
+    <h2 class="jumbotron text-center" id="oostenrijk">Sexdate Oostenrijk</h2>
     <div class="row text-center" id="keuze">
       <?php foreach ($at as $provat => $item) { ?>
       <div class="col-lg-3 col-md-6 mb-4">
@@ -171,7 +171,7 @@
       </div>
       <?php } ?>
     </div>
-    <h2 class="jumbotron text-center" id="zwitserland">Zwitserland</h2>
+    <h2 class="jumbotron text-center" id="zwitserland">Sexdate Zwitserland</h2>
     <div class="row text-center" id="keuze">
       <?php foreach ($ch as $provch => $item) { ?>
       <div class="col-lg-3 col-md-6 mb-4">

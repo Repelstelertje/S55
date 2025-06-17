@@ -53,7 +53,7 @@
         </div>
       </div>
       <script>
-        var api_url= "<?= api_base('be'); ?>/profile/province_age/be/<?= rawurlencode($provbe['name']); ?>/18/45/120/S";
+        var api_url= "<?= api_base('be'); ?>/profile/province_age/be/<?= rawurlencode($provbe['name']); ?>/45/99/120/S";
       </script>
     </div><!-- /.row -->
     <!-- Pagination -->

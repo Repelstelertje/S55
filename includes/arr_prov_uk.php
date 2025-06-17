@@ -1,5 +1,5 @@
 <?php 
-	// Provincies
+	// Provincies UK
 	$uk = array(
 
 					"east-midlands" => array(

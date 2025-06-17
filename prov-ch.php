@@ -51,7 +51,7 @@
             <a :href="'profile.php?country=ch&id=' + profile.id" class="card-footer btn btn-primary">Bekijk profiel</a></div>
         </div>
         <script>
-            var api_url= "<?= api_base('ch'); ?>/profile/province_age/ch/<?= rawurlencode($provch['name']); ?>/18/45/120/S";
+            var api_url= "<?= api_base('ch'); ?>/profile/province_age/ch/<?= rawurlencode($provch['name']); ?>/45/99/120/S";
         </script>
     </div><!-- /.row -->
     <!-- Pagination -->
