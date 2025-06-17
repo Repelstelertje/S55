@@ -20,7 +20,7 @@ require_once $base . '/includes/utils.php';
         }
 
   $metaDescription = $provch['info'];
-  include $base . '/includes/header.php';
+  include('includes/header.php');
 ?>
 
 <div class="container">
