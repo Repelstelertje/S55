@@ -3,7 +3,7 @@
   $companyName = "Sex55.net";
   include('includes/nav_items.php');
   // Config is required for API lookups when rendering profile pages
-  include_once('config.php');
+  include_once $base . '/config.php';
 
   /**
    * Convert a string to a URL friendly slug.
@@ -71,21 +71,55 @@
 
   if(isset($_GET['item'])){
     $item = filter_var($_GET['item'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-    $item = preg_replace('/^sexdate-/', '', $item);
-    $canonical = 'https://sex55.net/sexdate-' . $item;
-    $pageTitle = 'Sexdate ' . $item . ' | sex55.net';
-    if(isset($provnl['img'])){
-      $ogImage = 'https://sex55.net/img/front/' . $provnl['img'] . '.jpg';
-    } elseif(isset($provbe['img'])){
-      $ogImage = 'https://sex55.net/img/front/' . $provbe['img'] . '.jpg';
-    } elseif(isset($provuk['img'])){
-      $ogImage = 'https://sex55.net/img/front/' . $provuk['img'] . '.jpg';
-    } elseif(isset($provde['img'])){
-      $ogImage = 'https://sex55.net/img/front/' . $provde['img'] . '.jpg';
-    } elseif(isset($provat['img'])){
-      $ogImage = 'https://sex55.net/img/front/' . $provat['img'] . '.jpg';
-    } elseif(isset($provch['img'])){
-      $ogImage = 'https://sex55.net/img/front/' . $provch['img'] . '.jpg';
+
+    if(basename($_SERVER['PHP_SELF']) === 'datingtips.php'){
+      switch($item){
+        case 'datingtips':
+          $canonical = 'https://sex55.net/datingtips';
+          $pageTitle = 'Datingtips | sex55.net';
+          break;
+        case 'nl':
+          $canonical = 'https://sex55.net/datingtips-nederland';
+          $pageTitle = 'Datingtips Nederland | sex55.net';
+          break;
+        case 'be':
+          $canonical = 'https://sex55.net/datingtips-belgie';
+          $pageTitle = 'Datingtips België | sex55.net';
+          break;
+        case 'de':
+          $canonical = 'https://sex55.net/datingtips-duitsland';
+          $pageTitle = 'Datingtips Duitsland | sex55.net';
+          break;
+        case 'uk':
+          $canonical = 'https://sex55.net/datingtips-verenigd-koninkrijk';
+          $pageTitle = 'Datingtips Verenigd Koninkrijk | sex55.net';
+          break;
+        case 'at':
+          $canonical = 'https://sex55.net/datingtips-oostenrijk';
+          $pageTitle = 'Datingtips Oostenrijk | sex55.net';
+          break;
+        case 'ch':
+          $canonical = 'https://sex55.net/datingtips-zwitserland';
+          $pageTitle = 'Datingtips Zwitserland | sex55.net';
+          break;
+      }
+    } else {
+      $item = preg_replace('/^sexdate-/', '', $item);
+      $canonical = 'https://sex55.net/sexdate-' . $item;
+      $pageTitle = 'Sexdate ' . $item . ' | sex55.net';
+      if(isset($provnl['img'])){
+        $ogImage = 'https://sex55.net/img/front/' . $provnl['img'] . '.jpg';
+      } elseif(isset($provbe['img'])){
+        $ogImage = 'https://sex55.net/img/front/' . $provbe['img'] . '.jpg';
+      } elseif(isset($provuk['img'])){
+        $ogImage = 'https://sex55.net/img/front/' . $provuk['img'] . '.jpg';
+      } elseif(isset($provde['img'])){
+        $ogImage = 'https://sex55.net/img/front/' . $provde['img'] . '.jpg';
+      } elseif(isset($provat['img'])){
+        $ogImage = 'https://sex55.net/img/front/' . $provat['img'] . '.jpg';
+      } elseif(isset($provch['img'])){
+        $ogImage = 'https://sex55.net/img/front/' . $provch['img'] . '.jpg';
+      }
     }
   } elseif(isset($_GET['id'])){
     $id = filter_var($_GET['id'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
@@ -131,6 +165,10 @@
     if($profile_img){
       $ogImage = $profile_img;
     }
+  } elseif(isset($_GET['slug'])){
+    $slugParam = filter_var($_GET['slug'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+    $canonical = 'https://sex55.net/shemale-' . $slugParam;
+    $pageTitle = 'Date ' . $slugParam . ' | sex55.net';
   }
 
   echo '<link rel="canonical" href="' . $canonical . '" >';
@@ -159,7 +197,7 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu</button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <?php
-            include('includes/nav.php');
+            include $base . '/includes/nav.php';
           ?>
         </div>
       </div>
