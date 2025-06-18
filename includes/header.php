@@ -178,6 +178,11 @@
   echo '<meta property="og:title" content="' . htmlspecialchars($pageTitle, ENT_QUOTES, 'UTF-8') . '">';
   echo '<meta property="og:description" content="' . htmlspecialchars($description, ENT_QUOTES, 'UTF-8') . '">';
   echo '<meta property="og:image" content="' . $ogImage . '">';
+  // Twitter Card metadata
+  echo '<meta name="twitter:card" content="summary_large_image">';
+  echo '<meta name="twitter:title" content="' . htmlspecialchars($pageTitle, ENT_QUOTES, 'UTF-8') . '">';
+  echo '<meta name="twitter:description" content="' . htmlspecialchars($description, ENT_QUOTES, 'UTF-8') . '">';
+  echo '<meta name="twitter:image" content="' . $ogImage . '">';
 ?>
 
 <!-- Bootstrap core CSS -->
