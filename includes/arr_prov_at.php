@@ -1,5 +1,5 @@
 <?php
-// Provincies AT - sex55.net
+// Provincies AT
 $at = array(
 
     "burgenland" => array(
