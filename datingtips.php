@@ -1,6 +1,9 @@
 <?php 
 $base = __DIR__;
-	define("TITLE", "Datingtips");
+        define("TITLE", "Datingtips");
+
+        $canonical = 'https://sex55.net/datingtips';
+        $pageTitle = 'Datingtips | sex55.net';
 
         include $base . '/includes/array_tips.php';
 
