@@ -245,6 +245,7 @@ $base = __DIR__;
       <a href="https://lustfinden.com" target="_blank" class="m-0" title="LustFinden.com - Finde Lust & Spaß in Deiner Nähe heute!">LustFinden</a> - 
       <a href="https://geheimesexchat.com" target="_blank" class="m-0" title="GeheimerSexChat.com - Diskreter Sex-Chat in Deiner Nähe!">GeheimerSexChat</a> - 
       <a href="https://geheimelustchat.com" target="_blank" class="m-0" title="GeheimeLustChat.com - Diskreter Lust-Chat in Deiner Nähe!">GeheimeLustChat</a>
-  </div>
+    </div>
+    <p class="text-center"><a href="/partnerlinks.php">Meer partnerlinks...</a></p>
 </div><!-- container -->
 <?php include $base . '/includes/footer.php'; ?>
