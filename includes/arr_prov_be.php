@@ -1,5 +1,5 @@
 <?php
-// Provincies BE - sex55.net
+// Provincies BE
 $be = array(
 
     "antwerpen" => array(

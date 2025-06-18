@@ -1,5 +1,5 @@
 <?php
-// Provincies DE - sex55.net
+// Provincies DE
 $de = array(
 
     "baden-wurttemberg" => array(

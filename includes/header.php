@@ -1,7 +1,7 @@
 <?php
 
   $companyName = "Sex55.net";
-  include('includes/nav_items.php');
+  include $base . '/includes/nav_items.php';
   // Config is required for API lookups when rendering profile pages
   include_once $base . '/config.php';
 
@@ -65,9 +65,9 @@
 <meta name="theme-color" content="#ffffff">
 
 <?php
-  $canonical = 'https://sex55.net';
-  $pageTitle = '55+ Sexdating | sex55.net';
-  $ogImage = 'https://sex55.net/img/fb.png';
+  $canonical = $canonical ?? 'https://sex55.net';
+  $pageTitle = $pageTitle ?? '55+ Sexdating | sex55.net';
+  $ogImage = $ogImage ?? 'https://sex55.net/img/fb.png';
 
   if(isset($_GET['item'])){
     $item = filter_var($_GET['item'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
@@ -167,7 +167,7 @@
     }
   } elseif(isset($_GET['slug'])){
     $slugParam = filter_var($_GET['slug'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-    $canonical = 'https://sex55.net/shemale-' . $slugParam;
+    $canonical = 'https://sex55.net/sexdate-' . $slugParam;
     $pageTitle = 'Date ' . $slugParam . ' | sex55.net';
   }
 

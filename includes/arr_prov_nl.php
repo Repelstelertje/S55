@@ -1,5 +1,5 @@
 <?php
-// Provincies NL - sex55.net
+// Provincies NL
 $nl = array(
 
     "drenthe" => array(

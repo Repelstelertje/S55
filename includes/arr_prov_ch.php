@@ -1,5 +1,5 @@
 <?php
-// Provincies CH - sex55.net
+// Provincies CH
 $ch = array(
 
     "aargau" => array(

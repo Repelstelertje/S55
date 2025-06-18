@@ -80,116 +80,116 @@ $base = __DIR__;
     <p><a href="index.php">Sex55.net</a> is de contactadvertentie website om <b>snel en gratis</b> in contact te komen met jonge <b>vrouwen bij jou in de buurt</b>. Hier kun je jezelf <b>anoniem en gratis inschrijven</b> met een zelfgekozen profielnaam. Ook blijft je e-mailadres altijd geheim voor andere leden. Voor wie echt helemaal anoniem wil blijven, bestaat de mogelijkheid om geen foto op het profiel te tonen.</p>
     <p>Of je nou bewust op zoek bent naar een eenmalige sexdate of geregeld wil afspreken met dames voor een meerdere sexdates? Op <a href="index.php">Sex55.net</a> vind je <b>meer dan 10.000 single vrouwen die openstaan voor een sexdate</b>. Duizenden singles zijn op dit moment op zoek naar een sexdate, een sexpartner of meerdere sexdates. Van zoeken naar een sexdate binnen enkele dagen, gelijk sex bij jou in de buurt tot meerdere sexdates in een week. Bij <a href="index.php">Sex55.net</a> heb jij het snelst een sexdate in de BeNeLux! Kies in welk land jij wil zoeken naar een sexdate.</p>
   </div>
-    <div id="top-banner"></div>
-    <h2 class="jumbotron text-center" id="nederland">Sexdate Nederland</h2>
-		<div class="row text-center" id="keuze">
-			<?php 
-                                foreach ($nl as $provnl => $item) {
-                                    $slug = ($provnl === 'limburg') ? 'sexdate-limburg-nl' : 'sexdate-' . $provnl;
-                        ?>
-                        <div class="col-lg-3 col-md-6 mb-4">
-              <div class="card h-100 text-left">
-                <a href="<?php echo $slug; ?>"><img class="card-img-top" src="img/front/<?php echo $item['img']; ?>.jpg" alt="Sexdate <?php echo $item['name']; ?>" @error="imgError"></a>
-                <div class="card-body">
-                  <a href="<?php echo $slug; ?>"><h4 class="card-title"><?php echo $item['name']; ?></h4></a>
-                  <hr>
-                  <p class="card-text"><?php echo $item['info']; ?></p>
-                </div>
-                <a href="<?php echo $slug; ?>" class="card-footer btn btn-primary">Sexdate <?php echo $item['name']; ?></a>
-              </div>
-            </div>
-			<?php
-				}
-			?>
-		</div>
+  <div id="top-banner"></div>
+  <h2 class="jumbotron text-center" id="nederland">Sexdate Nederland</h2>
+  <div class="row text-center" id="keuze">
+    <?php 
+      foreach ($nl as $provnl => $item) {
+          $slug = ($provnl === 'limburg') ? 'sexdate-limburg-nl' : 'sexdate-' . $provnl;
+    ?>
+    <div class="col-lg-3 col-md-6 mb-4">
+      <div class="card h-100 text-left">
+        <a href="<?php echo $slug; ?>"><img class="card-img-top" src="img/front/<?php echo $item['img']; ?>.jpg" alt="Sexdate <?php echo $item['name']; ?>" @error="imgError"></a>
+        <div class="card-body">
+          <a href="<?php echo $slug; ?>"><h4 class="card-title"><?php echo $item['name']; ?></h4></a>
+          <hr>
+          <p class="card-text"><?php echo $item['info']; ?></p>
+        </div>
+        <a href="<?php echo $slug; ?>" class="card-footer btn btn-primary">Sexdate <?php echo $item['name']; ?></a>
+      </div>
+    </div>
+    <?php
+      }
+    ?>
+  </div>
 
-    <h2 class="jumbotron text-center" id="belgie">Sexdate België</h2>
-    <div class="row text-center" id="keuze">
-      <?php
-        foreach ($be as $provbe => $item) {
-            $slug = ($provbe === 'limburg') ? 'sexdate-limburg-be' : 'sexdate-' . $provbe;
-      ?>
-      <div class="col-lg-3 col-md-6 mb-4">
-        <div class="card h-100 text-left">
-          <a href="<?php echo $slug; ?>"><img class="card-img-top" src="img/front/<?php echo $item['img']; ?>.jpg" alt="Sexdate <?php echo $item['name']; ?>" @error="imgError"></a>
-          <div class="card-body">
-            <a href="<?php echo $slug; ?>"><h4 class="card-title"><?php echo $item['name']; ?></h4></a>
-            <hr>
-            <p class="card-text"><?php echo $item['info']; ?></p>
-          </div>
-          <a href="<?php echo $slug; ?>" class="card-footer btn btn-primary">Sexdate <?php echo $item['name']; ?></a>
+  <h2 class="jumbotron text-center" id="belgie">Sexdate België</h2>
+  <div class="row text-center" id="keuze">
+    <?php
+      foreach ($be as $provbe => $item) {
+      $slug = ($provbe === 'limburg') ? 'sexdate-limburg-be' : 'sexdate-' . $provbe;
+    ?>
+    <div class="col-lg-3 col-md-6 mb-4">
+      <div class="card h-100 text-left">
+        <a href="<?php echo $slug; ?>"><img class="card-img-top" src="img/front/<?php echo $item['img']; ?>.jpg" alt="Sexdate <?php echo $item['name']; ?>" @error="imgError"></a>
+        <div class="card-body">
+          <a href="<?php echo $slug; ?>"><h4 class="card-title"><?php echo $item['name']; ?></h4></a>
+          <hr>
+          <p class="card-text"><?php echo $item['info']; ?></p>
         </div>
+        <a href="<?php echo $slug; ?>" class="card-footer btn btn-primary">Sexdate <?php echo $item['name']; ?></a>
       </div>
-      <?php
-        }
-      ?>
     </div>
-    <h2 class="jumbotron text-center" id="uk">Sexdate United Kingdom</h2>
-    <div class="row text-center" id="keuze">
-      <?php foreach ($uk as $provuk => $item) { ?>
-      <div class="col-lg-3 col-md-6 mb-4">
-        <div class="card h-100 text-left">
-          <a href="sexdate-<?php echo $provuk; ?>"><img class="card-img-top" src="img/front/<?php echo $item['img']; ?>.jpg" alt="Sexdate <?php echo $item['name']; ?>" @error="imgError"></a>
-          <div class="card-body">
-            <a href="sexdate-<?php echo $provuk; ?>"><h4 class="card-title"><?php echo $item['name']; ?></h4></a>
-            <hr>
-            <p class="card-text"><?php echo $item['info']; ?></p>
-          </div>
-          <a href="sexdate-<?php echo $provuk; ?>" class="card-footer btn btn-primary">Sexdate <?php echo $item['name']; ?></a>
+    <?php
+      }
+    ?>
+  </div>
+  <h2 class="jumbotron text-center" id="uk">Sexdate United Kingdom</h2>
+  <div class="row text-center" id="keuze">
+    <?php foreach ($uk as $provuk => $item) { ?>
+    <div class="col-lg-3 col-md-6 mb-4">
+      <div class="card h-100 text-left">
+        <a href="sexdate-<?php echo $provuk; ?>"><img class="card-img-top" src="img/front/<?php echo $item['img']; ?>.jpg" alt="Sexdate <?php echo $item['name']; ?>" @error="imgError"></a>
+        <div class="card-body">
+          <a href="sexdate-<?php echo $provuk; ?>"><h4 class="card-title"><?php echo $item['name']; ?></h4></a>
+          <hr>
+          <p class="card-text"><?php echo $item['info']; ?></p>
         </div>
+        <a href="sexdate-<?php echo $provuk; ?>" class="card-footer btn btn-primary">Sexdate <?php echo $item['name']; ?></a>
       </div>
-      <?php } ?>
     </div>
-    <h2 class="jumbotron text-center" id="duitsland">Sexdate Duitsland</h2>
-    <div class="row text-center" id="keuze">
-      <?php foreach ($de as $provde => $item) { ?>
-      <div class="col-lg-3 col-md-6 mb-4">
-        <div class="card h-100 text-left">
-          <a href="sexdate-<?php echo $provde; ?>"><img class="card-img-top" src="img/front/<?php echo $item['img']; ?>.jpg" alt="Sexdate <?php echo $item['name']; ?>" @error="imgError"></a>
-          <div class="card-body">
-            <a href="sexdate-<?php echo $provde; ?>"><h4 class="card-title"><?php echo $item['name']; ?></h4></a>
-            <hr>
-            <p class="card-text"><?php echo $item['info']; ?></p>
-          </div>
-          <a href="sexdate-<?php echo $provde; ?>" class="card-footer btn btn-primary">Sexdate <?php echo $item['name']; ?></a>
+    <?php } ?>
+  </div>
+  <h2 class="jumbotron text-center" id="duitsland">Sexdate Duitsland</h2>
+  <div class="row text-center" id="keuze">
+    <?php foreach ($de as $provde => $item) { ?>
+    <div class="col-lg-3 col-md-6 mb-4">
+      <div class="card h-100 text-left">
+        <a href="sexdate-<?php echo $provde; ?>"><img class="card-img-top" src="img/front/<?php echo $item['img']; ?>.jpg" alt="Sexdate <?php echo $item['name']; ?>" @error="imgError"></a>
+        <div class="card-body">
+          <a href="sexdate-<?php echo $provde; ?>"><h4 class="card-title"><?php echo $item['name']; ?></h4></a>
+          <hr>
+          <p class="card-text"><?php echo $item['info']; ?></p>
         </div>
+        <a href="sexdate-<?php echo $provde; ?>" class="card-footer btn btn-primary">Sexdate <?php echo $item['name']; ?></a>
       </div>
-      <?php } ?>
     </div>
-    <h2 class="jumbotron text-center" id="oostenrijk">Sexdate Oostenrijk</h2>
-    <div class="row text-center" id="keuze">
-      <?php foreach ($at as $provat => $item) { ?>
-      <div class="col-lg-3 col-md-6 mb-4">
-        <div class="card h-100 text-left">
-          <a href="sexdate-<?php echo $provat; ?>"><img class="card-img-top" src="img/front/<?php echo $item['img']; ?>.jpg" alt="Sexdate <?php echo $item['name']; ?>" @error="imgError"></a>
-          <div class="card-body">
-            <a href="sexdate-<?php echo $provat; ?>"><h4 class="card-title"><?php echo $item['name']; ?></h4></a>
-            <hr>
-            <p class="card-text"><?php echo $item['info']; ?></p>
-          </div>
-          <a href="sexdate-<?php echo $provat; ?>" class="card-footer btn btn-primary">Sexdate <?php echo $item['name']; ?></a>
+    <?php } ?>
+  </div>
+  <h2 class="jumbotron text-center" id="oostenrijk">Sexdate Oostenrijk</h2>
+  <div class="row text-center" id="keuze">
+    <?php foreach ($at as $provat => $item) { ?>
+    <div class="col-lg-3 col-md-6 mb-4">
+      <div class="card h-100 text-left">
+        <a href="sexdate-<?php echo $provat; ?>"><img class="card-img-top" src="img/front/<?php echo $item['img']; ?>.jpg" alt="Sexdate <?php echo $item['name']; ?>" @error="imgError"></a>
+        <div class="card-body">
+          <a href="sexdate-<?php echo $provat; ?>"><h4 class="card-title"><?php echo $item['name']; ?></h4></a>
+          <hr>
+          <p class="card-text"><?php echo $item['info']; ?></p>
         </div>
+        <a href="sexdate-<?php echo $provat; ?>" class="card-footer btn btn-primary">Sexdate <?php echo $item['name']; ?></a>
       </div>
-      <?php } ?>
     </div>
-    <h2 class="jumbotron text-center" id="zwitserland">Sexdate Zwitserland</h2>
-    <div class="row text-center" id="keuze">
-      <?php foreach ($ch as $provch => $item) { ?>
-      <div class="col-lg-3 col-md-6 mb-4">
-        <div class="card h-100 text-left">
-          <a href="sexdate-<?php echo $provch; ?>"><img class="card-img-top" src="img/front/<?php echo $item['img']; ?>.jpg" alt="Sexdate <?php echo $item['name']; ?>" @error="imgError"></a>
-          <div class="card-body">
-            <a href="sexdate-<?php echo $provch; ?>"><h4 class="card-title"><?php echo $item['name']; ?></h4></a>
-            <hr>
-            <p class="card-text"><?php echo $item['info']; ?></p>
-          </div>
-          <a href="sexdate-<?php echo $provch; ?>" class="card-footer btn btn-primary">Sexdate <?php echo $item['name']; ?></a>
+    <?php } ?>
+  </div>
+  <h2 class="jumbotron text-center" id="zwitserland">Sexdate Zwitserland</h2>
+  <div class="row text-center" id="keuze">
+    <?php foreach ($ch as $provch => $item) { ?>
+    <div class="col-lg-3 col-md-6 mb-4">
+      <div class="card h-100 text-left">
+        <a href="sexdate-<?php echo $provch; ?>"><img class="card-img-top" src="img/front/<?php echo $item['img']; ?>.jpg" alt="Sexdate <?php echo $item['name']; ?>" @error="imgError"></a>
+        <div class="card-body">
+          <a href="sexdate-<?php echo $provch; ?>"><h4 class="card-title"><?php echo $item['name']; ?></h4></a>
+          <hr>
+          <p class="card-text"><?php echo $item['info']; ?></p>
         </div>
+        <a href="sexdate-<?php echo $provch; ?>" class="card-footer btn btn-primary">Sexdate <?php echo $item['name']; ?></a>
       </div>
-      <?php } ?>
     </div>
-    <div id="footer-banner"></div>
-    <div class="jumbotron text-center">
+    <?php } ?>
+  </div>
+  <div id="footer-banner"></div>
+  <div class="jumbotron text-center">
       <h6>Nederland</h6>
       <a href="https://buurtmilfs.nl" target="_blank" class="m-0" title="BuurtMilfs.nl - Vind Milfs in Jouw Buurt voor Contact!">BuurtMilfs</a> - 
       <a href="https://bd4xxx.nl" target="_blank" class="m-0" title="BD4XXX.nl - Ervaar Spanning en Sensualiteit in Nederland!">BD4XXX</a> - 

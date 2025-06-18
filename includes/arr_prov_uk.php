@@ -1,5 +1,5 @@
 <?php
-// Provincies UK - sex55.net
+// Provincies UK
 $uk = array(
 
     "east-midlands" => array(

@@ -1,5 +1,5 @@
 <?php
-// Datingtips - sex55.net
+// Datingtips
 $datingtips = array(
 
     "datingtips" => array(
