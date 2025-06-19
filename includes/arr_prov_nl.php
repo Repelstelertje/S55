@@ -47,7 +47,7 @@ $nl = array(
         'title' => "Sexdate Limburg",
         'info' => "Ontmoet 50+ singles in Limburg op zoek naar gezelschap, vriendschap of een serieuze date. Begin jouw nieuwe avontuur vandaag via sex55.net.",
         'tekst' => "<h2>50+ dating in Limburg via sex55.net</h2><p>Ben jij 50-plus en toe aan nieuw gezelschap in Limburg? Op sex55.net ontmoet je mensen die net als jij op zoek zijn naar fijne gesprekken, vriendschap of een serieuze relatie. Of je nu alleenstaand bent, gescheiden of weduwe – bij ons draait het om echte connecties op latere leeftijd.</p><p>In Limburg zijn dagelijks actieve leden online die een oprechte klik zoeken. Een wandeling, samen koffie drinken of gewoon een goed gesprek – het begint allemaal met een berichtje. Ons platform is veilig, discreet en speciaal ingericht voor volwassenen met levenservaring.</p><p>Aanmelden is gratis en anoniem. Maak vandaag nog kennis met leuke 50+ singles uit Limburg en geef jouw sociale leven een mooie impuls via sex55.net.</p>",
-        'img' => "limburg"
+        'img' => "limburg-nl"
     ),
 
     "noord-brabant" => array(
