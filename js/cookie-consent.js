@@ -25,7 +25,7 @@ function loadAnalytics() {
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'G-MJEYVZDR7N');
+  gtag('config', 'G-TFQ77HGPY0');
 }
 function loadMarketing() {
   // Google Ads Example (conversion tracking)
