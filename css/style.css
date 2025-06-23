@@ -6,6 +6,10 @@
 [v-cloak] {
   display: none;
 }
+html {
+  /* Offset scrolling to account for fixed header */
+  scroll-padding-top: 56px;
+}
 body {
   padding-top: 56px;
   background-image: linear-gradient(to right, #ffe684, #fff8e0, #ffe684);
@@ -13,7 +17,9 @@ body {
   padding-bottom: 78px;
   min-height: 100vh;
 }
-
+main {
+  margin: 40px 0;
+}
 a {
 	color: #F25F5C;
 	text-decoration: none !important;
@@ -42,7 +48,9 @@ hr {
 	border: none !important;
 	padding: .0rem 0rem;
 }
-
+.list-group-item:before {
+    font-weight: bold;
+}
 @media only screen and (max-width: 600px) {
   h1, h2 {
     font-size: 1.5rem;
@@ -101,6 +109,11 @@ hr {
 .jumbotron {
 	padding: 1rem;
 	background-color: rgba(255, 255, 255, 0.8);
+}
+.jumbotron[id^="land-"],
+.country-section {
+        /* Prevent fixed header from covering anchors */
+        scroll-margin-top: 56px;
 }
 .align-center {
 	display: block;
@@ -164,6 +177,18 @@ hr {
 	margin: 10px 0px;
 }
 
+/* Center all pagination elements */
+.pagination {
+    justify-content: center;
+}
+
+/* Ensure the pagination nav stretches across the row */
+.nav-pag {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 .page-item.active .page-link {
 	background-color: #F25F5C;
     border-color: #eee;
@@ -199,7 +224,8 @@ hr {
     float: left;
     margin: 10px 10px 10px 0px;
 }
-/*Footer */
+
+/* Footer */
 footer {
     color: #fff;
     text-align: center;
@@ -232,4 +258,9 @@ footer {
 
 .addthis_inline_follow_toolbox {
     margin-top: -5px;
+}
+
+/* Alert shown when profile data fails to load */
+.alert.data-error {
+    text-align: center;
 }

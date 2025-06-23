@@ -1,10 +1,8 @@
 <?php
-
   $companyName = "Sex55.net";
   include $base . '/includes/nav_items.php';
   // Config is required for API lookups when rendering profile pages
   include_once $base . '/config.php';
-
   /**
    * Convert a string to a URL friendly slug.
    *
@@ -107,18 +105,8 @@
       $item = preg_replace('/^sexdate-/', '', $item);
       $canonical = 'https://sex55.net/sexdate-' . $item;
       $pageTitle = 'Sexdate ' . $item . ' | sex55.net';
-      if(isset($provnl['img'])){
-        $ogImage = 'https://sex55.net/img/front/' . $provnl['img'] . '.jpg';
-      } elseif(isset($provbe['img'])){
-        $ogImage = 'https://sex55.net/img/front/' . $provbe['img'] . '.jpg';
-      } elseif(isset($provuk['img'])){
-        $ogImage = 'https://sex55.net/img/front/' . $provuk['img'] . '.jpg';
-      } elseif(isset($provde['img'])){
-        $ogImage = 'https://sex55.net/img/front/' . $provde['img'] . '.jpg';
-      } elseif(isset($provat['img'])){
-        $ogImage = 'https://sex55.net/img/front/' . $provat['img'] . '.jpg';
-      } elseif(isset($provch['img'])){
-        $ogImage = 'https://sex55.net/img/front/' . $provch['img'] . '.jpg';
+      if(isset($province['img'])){
+        $ogImage = 'https://sex55.net/img/front/' . $province['img'] . '.jpg';
       }
     }
   } elseif(isset($_GET['id'])){
@@ -207,7 +195,8 @@
         </div>
       </div>
     </nav>
-
+    <main>
+      
 
 
 

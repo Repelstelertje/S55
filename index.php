@@ -1,193 +1,299 @@
 <?php
 $base = __DIR__;
 	define("TITLE", "Home");
-  include $base . '/includes/arr_prov_nl.php';
-  include $base . '/includes/arr_prov_be.php';
-  include $base . '/includes/arr_prov_uk.php';
-  include $base . '/includes/arr_prov_de.php';
-  include $base . '/includes/arr_prov_at.php';
-  include $base . '/includes/arr_prov_ch.php';
-  include $base . '/includes/array_tips.php';
   include $base . '/includes/header.php';
 ?>
 
 <div class="container">
-  <!-- Jumbotron Header -->
-  <div class="jumbotron my-4 text-center">
-    <h1>sex55.net - Vind hier jouw gratis sexdate!</h1>
-    <hr>
-    <h2>Zoek hier vrouwen bij jou in buurt!</h2>
-    <div class="button-area">
-      <a class="dropdown-toggle btn btn-primary" href="#" id="provDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Nederland</a>
-      <div class="dropdown-menu" aria-labelledby="provDropdown">
-        <?php
-          foreach ($navItemsNL as $item) {
-              echo "<a class=\"dropdown-item\" href=\"$item[slug]\">$item[title]</a>";
-          }
-        ?>
-      </div>
-    </div>
-    <div class="button-area">
-      <a class="dropdown-toggle btn btn-primary" href="#" id="provDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">België</a>
-      <div class="dropdown-menu" aria-labelledby="provDropdown">
-        <?php
-          foreach ($navItemsBE as $item) {
-              echo "<a class=\"dropdown-item\" href=\"$item[slug]\">$item[title]</a>";
-          }
-        ?>
-      </div>
-    </div>
-    <div class="button-area">
-      <a class="dropdown-toggle btn btn-primary" href="#" id="provDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">UK</a>
-      <div class="dropdown-menu" aria-labelledby="provDropdown">
-        <?php
-          foreach ($navItemsUK as $item) {
-              echo "<a class=\"dropdown-item\" href=\"$item[slug]\">$item[title]</a>";
-          }
-        ?>
-      </div>
-    </div>
-    <div class="button-area">
-      <a class="dropdown-toggle btn btn-primary" href="#" id="provDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Duitsland</a>
-      <div class="dropdown-menu" aria-labelledby="provDropdown">
-        <?php
-          foreach ($navItemsDE as $item) {
-              echo "<a class=\"dropdown-item\" href=\"$item[slug]\">$item[title]</a>";
-          }
-        ?>
-      </div>
-    </div>
-    <div class="button-area">
-      <a class="dropdown-toggle btn btn-primary" href="#" id="provDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Oostenrijk</a>
-      <div class="dropdown-menu" aria-labelledby="provDropdown">
-        <?php
-          foreach ($navItemsAT as $item) {
-              echo "<a class=\"dropdown-item\" href=\"$item[slug]\">$item[title]</a>";
-          }
-        ?>
-      </div>
-    </div>
-    <div class="button-area">
-      <a class="dropdown-toggle btn btn-primary" href="#" id="provDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Zwitserland</a>
-      <div class="dropdown-menu" aria-labelledby="provDropdown">
-        <?php
-          foreach ($navItemsCH as $item) {
-              echo "<a class=\"dropdown-item\" href=\"$item[slug]\">$item[title]</a>";
-          }
-        ?>
-      </div>
-    </div>
-    <p><a href="index.php">Sex55.net</a> is de contactadvertentie website om <b>snel en gratis</b> in contact te komen met jonge <b>vrouwen bij jou in de buurt</b>. Hier kun je jezelf <b>anoniem en gratis inschrijven</b> met een zelfgekozen profielnaam. Ook blijft je e-mailadres altijd geheim voor andere leden. Voor wie echt helemaal anoniem wil blijven, bestaat de mogelijkheid om geen foto op het profiel te tonen.</p>
-    <p>Of je nou bewust op zoek bent naar een eenmalige sexdate of geregeld wil afspreken met dames voor een meerdere sexdates? Op <a href="index.php">Sex55.net</a> vind je <b>meer dan 10.000 single vrouwen die openstaan voor een sexdate</b>. Duizenden singles zijn op dit moment op zoek naar een sexdate, een sexpartner of meerdere sexdates. Van zoeken naar een sexdate binnen enkele dagen, gelijk sex bij jou in de buurt tot meerdere sexdates in een week. Bij <a href="index.php">Sex55.net</a> heb jij het snelst een sexdate in de BeNeLux! Kies in welk land jij wil zoeken naar een sexdate.</p>
-  </div>
-  <div id="top-banner"></div>
-  <h2 class="jumbotron text-center" id="nederland">Sexdate Nederland</h2>
-  <div class="row text-center" id="keuze">
-    <?php 
-      foreach ($nl as $provnl => $item) {
-          $slug = ($provnl === 'limburg') ? 'sexdate-limburg-nl' : 'sexdate-' . $provnl;
-    ?>
-    <div class="col-lg-3 col-md-6 mb-4">
-      <div class="card h-100 text-left">
-        <a href="<?php echo $slug; ?>"><img class="card-img-top" src="img/front/<?php echo $item['img']; ?>.jpeg" alt="Sexdate <?php echo $item['name']; ?>" @error="imgError"></a>
-        <div class="card-body">
-          <a href="<?php echo $slug; ?>"><h4 class="card-title"><?php echo $item['name']; ?></h4></a>
-          <hr>
-          <p class="card-text"><?php echo $item['info']; ?></p>
+    <!-- Jumbotron Header -->
+    <div class="jumbotron my-4 text-center">
+        <h1>sex55.net - Vind hier jouw gratis sexdate!</h1>
+        <hr>
+        <h2>Zoek hier vrouwen bij jou in buurt!</h2>
+        <div class="button-area">
+        <a class="btn btn-primary" href="#land-nl">Nederland</a>
         </div>
-        <a href="<?php echo $slug; ?>" class="card-footer btn btn-primary">Sexdate <?php echo $item['name']; ?></a>
-      </div>
-    </div>
-    <?php
-      }
-    ?>
-  </div>
-
-  <h2 class="jumbotron text-center" id="belgie">Sexdate België</h2>
-  <div class="row text-center" id="keuze">
-    <?php
-      foreach ($be as $provbe => $item) {
-      $slug = ($provbe === 'limburg') ? 'sexdate-limburg-be' : 'sexdate-' . $provbe;
-    ?>
-    <div class="col-lg-3 col-md-6 mb-4">
-      <div class="card h-100 text-left">
-        <a href="<?php echo $slug; ?>"><img class="card-img-top" src="img/front/<?php echo $item['img']; ?>.jpeg" alt="Sexdate <?php echo $item['name']; ?>" @error="imgError"></a>
-        <div class="card-body">
-          <a href="<?php echo $slug; ?>"><h4 class="card-title"><?php echo $item['name']; ?></h4></a>
-          <hr>
-          <p class="card-text"><?php echo $item['info']; ?></p>
+        <div class="button-area">
+        <a class="btn btn-primary" href="#land-be">België</a>
         </div>
-        <a href="<?php echo $slug; ?>" class="card-footer btn btn-primary">Sexdate <?php echo $item['name']; ?></a>
-      </div>
-    </div>
-    <?php
-      }
-    ?>
-  </div>
-  <h2 class="jumbotron text-center" id="uk">Sexdate United Kingdom</h2>
-  <div class="row text-center" id="keuze">
-    <?php foreach ($uk as $provuk => $item) { ?>
-    <div class="col-lg-3 col-md-6 mb-4">
-      <div class="card h-100 text-left">
-        <a href="sexdate-<?php echo $provuk; ?>"><img class="card-img-top" src="img/front/<?php echo $item['img']; ?>.jpeg" alt="Sexdate <?php echo $item['name']; ?>" @error="imgError"></a>
-        <div class="card-body">
-          <a href="sexdate-<?php echo $provuk; ?>"><h4 class="card-title"><?php echo $item['name']; ?></h4></a>
-          <hr>
-          <p class="card-text"><?php echo $item['info']; ?></p>
+        <div class="button-area">
+        <a class="btn btn-primary" href="#land-uk">UK</a>
         </div>
-        <a href="sexdate-<?php echo $provuk; ?>" class="card-footer btn btn-primary">Sexdate <?php echo $item['name']; ?></a>
-      </div>
-    </div>
-    <?php } ?>
-  </div>
-  <h2 class="jumbotron text-center" id="duitsland">Sexdate Duitsland</h2>
-  <div class="row text-center" id="keuze">
-    <?php foreach ($de as $provde => $item) { ?>
-    <div class="col-lg-3 col-md-6 mb-4">
-      <div class="card h-100 text-left">
-        <a href="sexdate-<?php echo $provde; ?>"><img class="card-img-top" src="img/front/<?php echo $item['img']; ?>.jpeg" alt="Sexdate <?php echo $item['name']; ?>" @error="imgError"></a>
-        <div class="card-body">
-          <a href="sexdate-<?php echo $provde; ?>"><h4 class="card-title"><?php echo $item['name']; ?></h4></a>
-          <hr>
-          <p class="card-text"><?php echo $item['info']; ?></p>
+        <div class="button-area">
+        <a class="btn btn-primary" href="#land-de">Duitsland</a>
         </div>
-        <a href="sexdate-<?php echo $provde; ?>" class="card-footer btn btn-primary">Sexdate <?php echo $item['name']; ?></a>
-      </div>
-    </div>
-    <?php } ?>
-  </div>
-  <h2 class="jumbotron text-center" id="oostenrijk">Sexdate Oostenrijk</h2>
-  <div class="row text-center" id="keuze">
-    <?php foreach ($at as $provat => $item) { ?>
-    <div class="col-lg-3 col-md-6 mb-4">
-      <div class="card h-100 text-left">
-        <a href="sexdate-<?php echo $provat; ?>"><img class="card-img-top" src="img/front/<?php echo $item['img']; ?>.jpeg" alt="Sexdate <?php echo $item['name']; ?>" @error="imgError"></a>
-        <div class="card-body">
-          <a href="sexdate-<?php echo $provat; ?>"><h4 class="card-title"><?php echo $item['name']; ?></h4></a>
-          <hr>
-          <p class="card-text"><?php echo $item['info']; ?></p>
+        <div class="button-area">
+        <a class="btn btn-primary" href="#land-at">Oostenrijk</a>
         </div>
-        <a href="sexdate-<?php echo $provat; ?>" class="card-footer btn btn-primary">Sexdate <?php echo $item['name']; ?></a>
-      </div>
-    </div>
-    <?php } ?>
-  </div>
-  <h2 class="jumbotron text-center" id="zwitserland">Sexdate Zwitserland</h2>
-  <div class="row text-center" id="keuze">
-    <?php foreach ($ch as $provch => $item) { ?>
-    <div class="col-lg-3 col-md-6 mb-4">
-      <div class="card h-100 text-left">
-        <a href="sexdate-<?php echo $provch; ?>"><img class="card-img-top" src="img/front/<?php echo $item['img']; ?>.jpeg" alt="Sexdate <?php echo $item['name']; ?>" @error="imgError"></a>
-        <div class="card-body">
-          <a href="sexdate-<?php echo $provch; ?>"><h4 class="card-title"><?php echo $item['name']; ?></h4></a>
-          <hr>
-          <p class="card-text"><?php echo $item['info']; ?></p>
+        <div class="button-area">
+        <a class="btn btn-primary" href="#land-ch">Zwitserland</a>
         </div>
-        <a href="sexdate-<?php echo $provch; ?>" class="card-footer btn btn-primary">Sexdate <?php echo $item['name']; ?></a>
-      </div>
     </div>
-    <?php } ?>
-  </div>
+    <div id="top-banner"></div>
+  <div class="jumbotron jumbotron-sm text-center" id="land-nl">
+        <h2>Nieuwste leden Nederland op zoek naar een sexdate!</h2>
+    </div>
+    <div class="row country-section" id="oproepjes-nl" v-cloak>
+        <div class="col-12" v-if="dataError">
+            <div class="alert alert-warning data-error">Profieldata kon niet geladen worden.</div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4 portfolio-item profile-card" :id="'profile-' + profile.id" v-for="profile in filtered_profiles">
+            <div class="card h-100">
+                <a :href="'daten-met-' + slugify(profile.name) + '?id=' + profile.id"><img class="card-img-top" :src="profile.src.replace('150x150', '300x300')" :alt="profile.name + ' daten in Nederland'" @error="imgError"></a>
+                <div class="card-body">
+                    <div class="card-top">
+                        <h4 class="card-title">{{ profile.name }}</h4>  
+                    </div>
+                    <ul class="list-group">
+                        <li class="list-group-item">Leeftijd: {{ profile.age }}</li>
+                        <li class="list-group-item">Relatie: {{ profile.relationship }}</li>
+                        <li class="list-group-item">Stad: {{ profile.city }}</li>
+                        <li class="list-group-item">Provincie: {{ profile.province }}</li>
+                    </ul>
+                </div>
+                <a :href="'daten-met-' + slugify(profile.name) + '?id=' + profile.id" class="card-footer btn btn-primary">Bekijk profiel</a>
+            </div>
+        </div>
+        <script>
+            window.addEventListener('load', function(){
+                createOproepjes('#oproepjes-nl', "<?= api_base('nl'); ?>/profile/banner9/120");
+            });
+        </script>
+        <!-- Pagination -->
+        <nav class="nav-pag" aria-label="Page navigation">
+            <ul class="pagination flex-wrap justify-content-center">
+                <li class="page-item">
+                    <a class="page-link" aria-label="Vorige" v-on:click="set_page_number(page-1)" ><span aria-hidden="true">&laquo;</span><span class="sr-only">Vorige</span></a>
+                </li> 
+                <li v-for="page_number in max_page_number" class="page-item" v-bind:class="{ active: page_number == page }" >
+                  <a class="page-link" v-on:click="set_page_number(page_number)">{{ page_number }}</a>
+                </li> 
+                <li class="page-item">
+                  <a class="page-link" aria-label="Volgende" v-on:click="set_page_number(page+1)" ><span aria-hidden="true">&raquo;</span><span class="sr-only">Volgende</span></a>
+                </li>
+            </ul>
+        </nav>
+    </div><!-- /.row -->
+    <div class="jumbotron jumbotron-sm text-center" id="land-be">
+        <h2>Nieuwste leden België op zoek naar een sexdate!</h2>
+    </div>
+    <div class="row country-section" id="oproepjes-be" v-cloak>
+        <div class="col-12" v-if="dataError">
+            <div class="alert alert-warning data-error">Profieldata kon niet geladen worden.</div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4 portfolio-item profile-card" :id="'profile-' + profile.id" v-for="profile in filtered_profiles">
+            <div class="card h-100">
+                <a :href="'daten-met-' + slugify(profile.name) + '?id=' + profile.id"><img class="card-img-top" :src="profile.src.replace('150x150', '300x300')" :alt="profile.name + ' daten in België'" @error="imgError"></a>
+                <div class="card-body">
+                    <div class="card-top">
+                        <h4 class="card-title">{{ profile.name }}</h4>
+                    </div>
+                    <ul class="list-group">
+                        <li class="list-group-item">Leeftijd: {{ profile.age }}</li>
+                        <li class="list-group-item">Relatie: {{ profile.relationship }}</li>
+                        <li class="list-group-item">Stad: {{ profile.city }}</li>
+                        <li class="list-group-item">Provincie: {{ profile.province }}</li>
+                    </ul>
+                </div>
+                <a :href="'daten-met-' + slugify(profile.name) + '?id=' + profile.id" class="card-footer btn btn-primary">Bekijk profiel</a>
+            </div>
+        </div>
+        <script>
+            window.addEventListener('load', function(){
+                createOproepjes('#oproepjes-be', "<?= api_base('be'); ?>/profile/banner9/120");
+            });
+        </script>
+        <!-- Pagination -->
+        <nav class="nav-pag" aria-label="Page navigation">
+            <ul class="pagination flex-wrap justify-content-center">
+                <li class="page-item">
+                    <a class="page-link" aria-label="Vorige" v-on:click="set_page_number(page-1)" ><span aria-hidden="true">&laquo;</span><span class="sr-only">Vorige</span></a>
+                </li> 
+                <li v-for="page_number in max_page_number" class="page-item" v-bind:class="{ active: page_number == page }" >
+                  <a class="page-link" v-on:click="set_page_number(page_number)">{{ page_number }}</a>
+                </li> 
+                <li class="page-item">
+                  <a class="page-link" aria-label="Volgende" v-on:click="set_page_number(page+1)" ><span aria-hidden="true">&raquo;</span><span class="sr-only">Volgende</span></a>
+                </li>
+            </ul>
+        </nav>
+    </div><!-- /.row -->
+    <div class="jumbotron jumbotron-sm text-center" id="land-uk">
+        <h2>Nieuwste leden United Kingdom op zoek naar een sexdate!</h2>
+    </div>
+    <div class="row country-section" id="oproepjes-uk" v-cloak>
+        <div class="col-12" v-if="dataError">
+            <div class="alert alert-warning data-error">Profieldata kon niet geladen worden.</div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4 portfolio-item profile-card" :id="'profile-' + profile.id" v-for="profile in filtered_profiles">
+            <div class="card h-100">
+                <a :href="'daten-met-' + slugify(profile.name) + '?id=' + profile.id"><img class="card-img-top" :src="profile.src.replace('150x150', '300x300')" :alt="profile.name + ' daten in United Kingdom'" @error="imgError"></a>
+                <div class="card-body">
+                    <div class="card-top">
+                        <h4 class="card-title">{{ profile.name }}</h4>
+                    </div>
+                    <ul class="list-group">
+                        <li class="list-group-item">Leeftijd: {{ profile.age }}</li>
+                        <li class="list-group-item">Relatie: {{ profile.relationship }}</li>
+                        <li class="list-group-item">Stad: {{ profile.city }}</li>
+                        <li class="list-group-item">Regio: {{ profile.province }}</li>
+                    </ul>
+                </div>
+                <a :href="'daten-met-' + slugify(profile.name) + '?id=' + profile.id" class="card-footer btn btn-primary">Bekijk profiel</a>
+            </div>
+        </div>
+        <script>
+            window.addEventListener('load', function(){
+                createOproepjes('#oproepjes-uk', "<?= api_base('uk'); ?>/profile/banner9/120");
+            });
+        </script>
+        <!-- Pagination -->
+        <nav class="nav-pag" aria-label="Page navigation">
+            <ul class="pagination flex-wrap justify-content-center">
+                <li class="page-item">
+                    <a class="page-link" aria-label="Vorige" v-on:click="set_page_number(page-1)" ><span aria-hidden="true">&laquo;</span><span class="sr-only">Vorige</span></a>
+                </li> 
+                <li v-for="page_number in max_page_number" class="page-item" v-bind:class="{ active: page_number == page }" >
+                  <a class="page-link" v-on:click="set_page_number(page_number)">{{ page_number }}</a>
+                </li> 
+                <li class="page-item">
+                  <a class="page-link" aria-label="Volgende" v-on:click="set_page_number(page+1)" ><span aria-hidden="true">&raquo;</span><span class="sr-only">Volgende</span></a>
+                </li>
+            </ul>
+        </nav>
+    </div><!-- /.row -->
+    <div class="jumbotron jumbotron-sm text-center" id="land-de">
+        <h2>Nieuwste leden Duitsland op zoek naar een sexdate!</h2>
+    </div>
+    <div class="row country-section" id="oproepjes-de" v-cloak>
+        <div class="col-12" v-if="dataError">
+            <div class="alert alert-warning data-error">Profieldata kon niet geladen worden.</div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4 portfolio-item profile-card" :id="'profile-' + profile.id" v-for="profile in filtered_profiles">
+            <div class="card h-100">
+                <a :href="'daten-met-' + slugify(profile.name) + '?id=' + profile.id"><img class="card-img-top" :src="profile.src.replace('150x150', '300x300')" :alt="profile.name + ' daten in Duitsland'" @error="imgError"></a>
+                <div class="card-body">
+                    <div class="card-top">
+                        <h4 class="card-title">{{ profile.name }}</h4>
+                    </div>
+                    <ul class="list-group">
+                        <li class="list-group-item">Leeftijd: {{ profile.age }}</li>
+                        <li class="list-group-item">Relatie: {{ profile.relationship }}</li>
+                        <li class="list-group-item">Stad: {{ profile.city }}</li>
+                        <li class="list-group-item">Provincie: {{ profile.province }}</li>
+                    </ul>
+                </div>
+                <a :href="'daten-met-' + slugify(profile.name) + '?id=' + profile.id" class="card-footer btn btn-primary">Bekijk profiel</a>
+            </div>
+        </div>
+        <script>
+            window.addEventListener('load', function(){
+                createOproepjes('#oproepjes-de', "<?= api_base('de'); ?>/profile/banner9/120");
+            });
+        </script>
+        <!-- Pagination -->
+        <nav class="nav-pag" aria-label="Page navigation">
+            <ul class="pagination flex-wrap justify-content-center">
+                <li class="page-item">
+                    <a class="page-link" aria-label="Vorige" v-on:click="set_page_number(page-1)" ><span aria-hidden="true">&laquo;</span><span class="sr-only">Vorige</span></a>
+                </li> 
+                <li v-for="page_number in max_page_number" class="page-item" v-bind:class="{ active: page_number == page }" >
+                  <a class="page-link" v-on:click="set_page_number(page_number)">{{ page_number }}</a>
+                </li> 
+                <li class="page-item">
+                  <a class="page-link" aria-label="Volgende" v-on:click="set_page_number(page+1)" ><span aria-hidden="true">&raquo;</span><span class="sr-only">Volgende</span></a>
+                </li>
+            </ul>
+        </nav>
+    </div><!-- /.row -->
+    <div class="jumbotron jumbotron-sm text-center" id="land-at">
+        <h2>Nieuwste leden Oostenrijk op zoek naar een sexdate!</h2>
+    </div>
+    <div class="row country-section" id="oproepjes-at" v-cloak>
+        <div class="col-12" v-if="dataError">
+            <div class="alert alert-warning data-error">Profieldata kon niet geladen worden.</div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4 portfolio-item profile-card" :id="'profile-' + profile.id" v-for="profile in filtered_profiles">
+            <div class="card h-100">
+                <a :href="'daten-met-' + slugify(profile.name) + '?id=' + profile.id"><img class="card-img-top" :src="profile.src.replace('150x150', '300x300')" :alt="profile.name + ' daten in Oostenrijk'" @error="imgError"></a>
+                <div class="card-body">
+                    <div class="card-top">
+                        <h4 class="card-title">{{ profile.name }}</h4>
+                    </div>
+                    <ul class="list-group">
+                        <li class="list-group-item">Leeftijd: {{ profile.age }}</li>
+                        <li class="list-group-item">Relatie: {{ profile.relationship }}</li>
+                        <li class="list-group-item">Stad: {{ profile.city }}</li>
+                        <li class="list-group-item">Provincie: {{ profile.province }}</li>
+                    </ul>
+                </div>
+                <a :href="'daten-met-' + slugify(profile.name) + '?id=' + profile.id" class="card-footer btn btn-primary">Bekijk profiel</a>
+            </div>
+        </div>
+        <script>
+            window.addEventListener('load', function(){
+                createOproepjes('#oproepjes-at', "<?= api_base('at'); ?>/profile/banner9/120");
+            });
+        </script>
+        <!-- Pagination -->
+        <nav class="nav-pag" aria-label="Page navigation">
+            <ul class="pagination flex-wrap justify-content-center">
+                <li class="page-item">
+                    <a class="page-link" aria-label="Vorige" v-on:click="set_page_number(page-1)" ><span aria-hidden="true">&laquo;</span><span class="sr-only">Vorige</span></a>
+                </li> 
+                <li v-for="page_number in max_page_number" class="page-item" v-bind:class="{ active: page_number == page }" >
+                  <a class="page-link" v-on:click="set_page_number(page_number)">{{ page_number }}</a>
+                </li> 
+                <li class="page-item">
+                  <a class="page-link" aria-label="Volgende" v-on:click="set_page_number(page+1)" ><span aria-hidden="true">&raquo;</span><span class="sr-only">Volgende</span></a>
+                </li>
+            </ul>
+        </nav>
+    </div><!-- /.row -->
+    <div class="jumbotron jumbotron-sm text-center" id="land-ch">
+        <h2>Nieuwste leden Zwitserland op zoek naar een sexdate!</h2>
+    </div>
+    <div class="row country-section" id="oproepjes-ch" v-cloak>
+        <div class="col-12" v-if="dataError">
+            <div class="alert alert-warning data-error">Profieldata kon niet geladen worden.</div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4 portfolio-item profile-card" :id="'profile-' + profile.id" v-for="profile in filtered_profiles">
+            <div class="card h-100">
+                <a :href="'daten-met-' + slugify(profile.name) + '?id=' + profile.id"><img class="card-img-top" :src="profile.src.replace('150x150', '300x300')" :alt="profile.name + ' daten in Zwitserland'" @error="imgError"></a>
+                <div class="card-body">
+                    <div class="card-top">
+                        <h4 class="card-title">{{ profile.name }}</h4>
+                    </div>
+                    <ul class="list-group">
+                        <li class="list-group-item">Leeftijd: {{ profile.age }}</li>
+                        <li class="list-group-item">Relatie: {{ profile.relationship }}</li>
+                        <li class="list-group-item">Stad: {{ profile.city }}</li>
+                        <li class="list-group-item">Regio: {{ profile.province }}</li>
+                    </ul>
+                </div>
+                <a :href="'daten-met-' + slugify(profile.name) + '?id=' + profile.id" class="card-footer btn btn-primary">Bekijk profiel</a>
+            </div>
+        </div>
+        <script>
+            window.addEventListener('load', function(){
+                createOproepjes('#oproepjes-ch', "<?= api_base('ch'); ?>/profile/banner9/120");
+            });
+        </script>
+        <!-- Pagination -->
+        <nav class="nav-pag" aria-label="Page navigation">
+            <ul class="pagination flex-wrap justify-content-center">
+                <li class="page-item">
+                    <a class="page-link" aria-label="Vorige" v-on:click="set_page_number(page-1)" ><span aria-hidden="true">&laquo;</span><span class="sr-only">Vorige</span></a>
+                </li> 
+                <li v-for="page_number in max_page_number" class="page-item" v-bind:class="{ active: page_number == page }" >
+                  <a class="page-link" v-on:click="set_page_number(page_number)">{{ page_number }}</a>
+                </li> 
+                <li class="page-item">
+                  <a class="page-link" aria-label="Volgende" v-on:click="set_page_number(page+1)" ><span aria-hidden="true">&raquo;</span><span class="sr-only">Volgende</span></a>
+                </li>
+            </ul>
+        </nav>
+    </div><!-- /.row -->
   <div id="footer-banner"></div>
   <div class="jumbotron text-center">
       <h6>Nederland</h6>
@@ -246,6 +352,5 @@ $base = __DIR__;
       <a href="https://geheimesexchat.com" target="_blank" class="m-0" title="GeheimerSexChat.com - Diskreter Sex-Chat in Deiner Nähe!">GeheimerSexChat</a> - 
       <a href="https://geheimelustchat.com" target="_blank" class="m-0" title="GeheimeLustChat.com - Diskreter Lust-Chat in Deiner Nähe!">GeheimeLustChat</a>
     </div>
-    <p class="text-center"><a href="/partnerlinks.php">Meer partnerlinks...</a></p>
 </div><!-- container -->
 <?php include $base . '/includes/footer.php'; ?>
